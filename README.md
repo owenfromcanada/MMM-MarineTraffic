@@ -39,25 +39,25 @@ This module uses [aisstream.io](https://aisstream.io/) to retrieve data.  You wi
 Minimal configuration to use the module:
 
 ```js
-		{
-			module: "MMM-MarineTraffic",
-			position: "middle_center",
-			config: {
+    {
+      module: "MMM-MarineTraffic",
+      position: "middle_center",
+      config: {
         // get your own API key at https://aisstream.io/
-				apiKey: "YOURAPIKEYGOESHERE"
-			}
-		},
+        apiKey: "YOURAPIKEYGOESHERE"
+      }
+    },
 ```
 
 Configuration with all options:
 
 ```js
-		{
-			module: "MMM-MarineTraffic",
-			position: "middle_center",
-			config: {
+    {
+      module: "MMM-MarineTraffic",
+      position: "middle_center",
+      config: {
         // get your own API key at https://aisstream.io/
-				apiKey: "YOURAPIKEYGOESHERE",
+        apiKey: "YOURAPIKEYGOESHERE",
 
         maximumEntries: 10,
 
@@ -80,8 +80,8 @@ Configuration with all options:
         lat2: null,
         lon1: null,
         lon2: null,
-			}
-		},
+      }
+    },
 ```
 
 ## License
