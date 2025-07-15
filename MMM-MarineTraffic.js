@@ -9,7 +9,6 @@ Module.register("MMM-MarineTraffic", {
     lon1: null,
     lon2: null,
     radius: 30, // km
-    updateInterval: 5, // minutes
     underwayOnly: false,
     preciseCompass: false,
     apiKey: ""
