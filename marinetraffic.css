@@ -1,0 +1,19 @@
+.MMM-MarineTraffic-Table {
+  table-layout: auto;
+  max-width: 400px;
+  margin: 0px auto;
+}
+
+.MMM-MarineTraffic-Status {
+  width: 22px;
+  text-align: right;
+}
+
+.MMM-MarineTraffic-Name {
+  text-align: left;
+  padding-left: 8px;
+}
+
+.MMM-MarineTraffic-Distance {
+  text-align: right;
+}

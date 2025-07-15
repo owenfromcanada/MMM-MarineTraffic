@@ -1,0 +1,15 @@
+{
+  "name": "MMM-MarineTraffic",
+  "version": "0.0.0",
+  "description": "Module to retrieve marine traffic for a given area",
+  "main": "MMM-MarineTraffic.js",
+  "author": "Owen Tosh",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/owenfromcanada/MMM-MarineTraffic.git"
+  },
+  "dependencies": {
+    "ws": "^8.18.3"
+  }
+}
