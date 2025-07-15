@@ -10,11 +10,13 @@
 
 ### Install
 
-In your terminal, go to the `modules` directory and clone the repository:
+In your terminal, go to the `modules` directory and clone the repository, then install the required node packages:
 
 ```bash
 cd ~/MagicMirror/modules
 git clone https://github.com/owenfromcanada/MMM-MarineTraffic.git
+cd MMM-MarineTraffic
+npm install
 ```
 
 ### Update
