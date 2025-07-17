@@ -1,6 +1,6 @@
 {
   "name": "MMM-MarineTraffic",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Module to retrieve marine traffic for a given area",
   "main": "MMM-MarineTraffic.js",
   "author": "Owen Tosh",
