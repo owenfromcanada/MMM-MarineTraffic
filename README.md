@@ -72,6 +72,11 @@ Configuration with all options:
         // time after which unupdated entries are removed
         purgeAfter: 600, // in seconds
 
+        // vessel names can be brighter or dimmed depending on different conditions
+        // - approaching: approaching vessels are bright, departing vessels are dim, others are normal
+        // if all options are false, all vessel names are bright
+        highlightApproaching: false,
+
         // either specify a center point and radius
         lat: 51.011998,
         lon: 1.488079,

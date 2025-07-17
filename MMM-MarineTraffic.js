@@ -11,6 +11,7 @@ Module.register("MMM-MarineTraffic", {
     radius: 30, // km
     underwayOnly: false,
     preciseCompass: false,
+    highlightApproaching: false,
     apiKey: ""
   },
 
@@ -93,7 +94,15 @@ Module.register("MMM-MarineTraffic", {
       row.appendChild(statusCell);
 
       let nameCell = document.createElement("td");
-      nameCell.className = "MMM-MarineTraffic-Name bright";
+      nameCell.className = "MMM-MarineTraffic-Name";
+      if (self.config.highlightApproaching) {
+        if (boat.underway) {
+          const color = [" dimmed", "", " bright", " bright", "", " dimmed"];
+          nameCell.className += color[(Math.abs(boat.direction - boat.course)/60).toFixed() % 6];
+        }
+      } else {
+        nameCell.className += " bright";
+      }
       nameCell.innerHTML = boat.name;
       row.appendChild(nameCell);
 
