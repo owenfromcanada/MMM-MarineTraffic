@@ -12,6 +12,7 @@ Module.register("MMM-MarineTraffic", {
     underwayOnly: false,
     preciseCompass: false,
     highlightApproaching: false,
+    highlightWithin: null,
     apiKey: ""
   },
 
@@ -94,15 +95,25 @@ Module.register("MMM-MarineTraffic", {
       row.appendChild(statusCell);
 
       let nameCell = document.createElement("td");
-      nameCell.className = "MMM-MarineTraffic-Name";
+      let colorClass = "bright";
       if (self.config.highlightApproaching) {
         if (boat.underway) {
-          const color = [" dimmed", "", " bright", " bright", "", " dimmed"];
-          nameCell.className += color[(Math.abs(boat.direction - boat.course)/60).toFixed() % 6];
+          const color = ["dimmed", "", "bright", "bright", "", "dimmed"];
+          colorClass = color[(Math.abs(boat.direction - boat.course)/60).toFixed() % 6];
+        } else {
+          colorClass = "";
         }
-      } else {
-        nameCell.className += " bright";
       }
+      if (self.config.highlightWithin > 0) {
+        if (self.config.highlightApproaching) {
+          if (boat.distance > self.config.highlightWithin && colorClass == "bright") {
+            colorClass = "";
+          }
+        } else if (boat.distance > self.config.highlightWithin) {
+          colorClass = "dimmed";
+        }
+      }
+      nameCell.className = "MMM-MarineTraffic-Name " + colorClass;
       nameCell.innerHTML = boat.name;
       row.appendChild(nameCell);
 

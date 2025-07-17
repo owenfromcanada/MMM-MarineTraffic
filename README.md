@@ -74,8 +74,11 @@ Configuration with all options:
 
         // vessel names can be brighter or dimmed depending on different conditions
         // - approaching: approaching vessels are bright, departing vessels are dim, others are normal
-        // if all options are false, all vessel names are bright
+        // - within: if set to a positive value, vessels are bright if they are within that distance (in km)
+        // if both options are set, both conditions must be met for a vessel to be bright
+        // if both options are false, all vessel names are bright
         highlightApproaching: false,
+        highlightWithin: null,
 
         // either specify a center point and radius
         lat: 51.011998,
